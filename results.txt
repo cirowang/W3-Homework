@@ -1,0 +1,36 @@
+Query: Will Bitcoin reach 100k this year?
+
+Retrieved Sources (top 3):
+1) "Will Bitcoin reach $100,000 by December 31, 2026?"
+   Metadata: {'chunk_index': 0, 'line_number': 1426, 'source': 'market_data.txt'}
+   Distance: 0.2416
+   Link: market_data.txt#L1426
+
+2) "Will Bitcoin reach $110,000 by December 31, 2026?"
+   Metadata: {'source': 'market_data.txt', 'line_number': 1425, 'chunk_index': 0}
+   Distance: 0.3820
+   Link: market_data.txt#L1425
+
+3) "Will Bitcoin reach $150,000 by December 31, 2026?"
+   Metadata: {'chunk_index': 0, 'line_number': 1421, 'source': 'market_data.txt'}
+   Distance: 0.3847
+   Link: market_data.txt#L1421
+
+Final Answer (model): I don't know
+
+Notes:
+- The workflow auto-indexed `market_data.txt` (2091 chunks) before querying.
+- The prompt used strict context: if context doesn't contain the answer, the model returns "I don't know".
+
+
+
+--- RAG RUN ---
+Query: What do prediction markets say about Bitcoin reaching ,000 by December 31, 2026?
+
+Based on 3 retrieved market snippets for the question: What do prediction markets say about Bitcoin reaching ,000 by December 31, 2026?
+Source 1 (market_data.txt#L1416, distance=0.4199): Will Bitcoin reach $200,000 by December 31, 2026?
+Source 2 (market_data.txt#L1426, distance=0.4238): Will Bitcoin reach $100,000 by December 31, 2026?
+Source 3 (market_data.txt#L1421, distance=0.4393): Will Bitcoin reach $150,000 by December 31, 2026?
+Observed explicit numeric mentions in sources: $200,000, 31,, 2026, $100,000, 31,, 2026, $150,000, 31,, 2026
+Conclusion: The retrieved markets include explicit numeric indications; answer should be formed from these sources and cited above.
+Answer (retrieval-backed): See the cited sources above; they are the basis for any probabilistic estimate.
